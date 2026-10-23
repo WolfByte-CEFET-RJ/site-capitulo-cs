@@ -16,6 +16,7 @@ function Projetos() {
       name: "Site Do Ramo",
       description: "Site de inscrição e divulgação do Ramo Estudantil IEEE CEFET/RJ.",
       team: "Web/App",
+      status: "Finalizado",
       type: "Projeto",
       link: "https://www.ramoieeecefetrj.com.br/",
       about: "O Site do Ramo é o principal canal de divulgação do Ramo Estudantil - IEEE - CEFET/RJ. Nele,  são descritos todas as informações sobre a extensão, história, valores, missão, equipes, projetos, etc. Além da divulgação, é pelo website que estudantes do CEFET/RJ se inscrevem no Processo Seletivo Externo do Ramo Estudantil e demonstram interesse em ser membros. Através dele, os Coordenadores das Equipes (Chair) podem atualizar informações sobre seus capítulos e a Diretoria pode agendar processos seletivos.",
@@ -32,6 +33,7 @@ function Projetos() {
       name: "Smart Garden",
       description: "Software de gerenciamento de hortas automatizadas. Parceria com capítulo PES/CEFET-RJ",
       team: "Web/App",
+      status: "Finalizado",
       type: "Projeto",
       link: "https://github.com/WolfByte-CEFET-RJ/Web-Irrigador_automatico_application/tree/master",
       about: "Parceria com o PES/CEFET-RJ, é um software de gerenciamento de hortas automatizadas que integra princípios da sustentabilidade e desenvolvimento de software. A solução foi projetada como uma aplicação versátil que funciona como central de processamento, monitoramento e controle remoto da irrigação das plantações, utilizando sensores de umidade integrados via protocolo MQTT, caracterizando-se como um sistema IoT. A metodologia adotada envolveu o uso de tecnologias de desenvolvimento de baixo custo e banco de dados para armazenamento e análise dos dados coletados. Os resultados alcançados demonstram que a harmonia entre sustentabilidade e programação pode ser alcançada visando o benefício do usuário. Conclui-se que o Smart Garden é uma ferramenta viável e de impacto social positivo desde sua concepção até sua implantação, promovendo a aproximação entre tecnologia e práticas sustentáveis.",
@@ -58,6 +60,7 @@ function Projetos() {
       name: "Software Odoyá",
       description: "Website do projeto Odoyá da Extensão ENACTUS.",
       team: "Web/App",
+      status: "Finalizado",
       type: "Projeto",
       link: "https://github.com/WolfByte-CEFET-RJ/Software-Odoya/tree/master",
       about: "Apoiando a iniciativa de contrução de projetos com maior impacto sócio-ambiental, a aplicação tem como objetivo auxiliar os principais processos do projeto Odoyá-ENACTUS/RJ (@odoya.projeto). A proposta é produzir um sistema que controle o cadastro de pontos de coleta de esponja, depósitos, mutirões de limpeza e inscrições. ",
@@ -82,6 +85,7 @@ function Projetos() {
       name: "Ramo Store",
       description: "E-commerce de produtos do Ramo Estudatil IEEE - CEFET/RJ",
       team: "Web/App",
+      status: "Finalizado",
       type: "Mini-projeto",
       link: "https://github.com/WolfByte-CEFET-RJ/Minicase-IEEEStore",
       about: "",
@@ -97,6 +101,7 @@ function Projetos() {
       name: "WiseFinance",
       description: "Website de carteira digital para controle de receitas e despesas.",
       team: "Web/App",
+      status: "Finalizado",
       type: "Mini-projeto",
       link: "https://github.com/WolfByte-CEFET-RJ/Web-minicase_Wise_Finance",
       about: "",
@@ -111,6 +116,7 @@ function Projetos() {
       name: "Site CS + CEFET/RJ",
       description: "Website de divulgação do Capítulo Computer Society no CEFET/RJ",
       team: "Web/App",
+      status: "Finalizado",
       type: "Atividade",
       link: "https://www.cs-cefetrj.com.br/",
       about: "",
@@ -124,6 +130,7 @@ function Projetos() {
       name: "I<3E",
       description: "Jogo estilo Dating Sim com referências ao Student Branch",
       team: "Games",
+      status: "Finalizado",
       type: "Projeto",
       link: "",
       about: "",
@@ -133,6 +140,7 @@ function Projetos() {
       name: "Bear Garden",
       description: "Jogo de minigames com narrativa interativa.",
       team: "Games",
+      status: "Finalizado",
       type: "Projeto",
       link: "",
       about: "",
@@ -142,6 +150,7 @@ function Projetos() {
       name: "Sepex Survivor",
       description: "Jogo mobile estilo Bullet Hell com times do Ramo.",
       team: "Games",
+      status: "Finalizado",
       type: "Projeto",
       link: "",
       about: "",
@@ -151,6 +160,7 @@ function Projetos() {
       name: "AVIR",
       description: "IA e BOT para sistemas de interface inteligentes.",
       team: "IA/BOT",
+      status: "Finalizado",
       type: "Projeto",
       link: "",
       about: "",
@@ -160,6 +170,7 @@ function Projetos() {
       name: "V3S",
       description: "Robôs IEEE-VSSS com IA e IoT. Parceria com capítulo RAS/CEFET-RJ",
       team: "IA/BOT",
+      status: "Finalizado",
       type: "Projeto",
       link: "",
       about: "",
@@ -169,6 +180,7 @@ function Projetos() {
       name: "SIR",
       description: "Automação inteligente de processos do Ramo.",
       team: "IA/BOT",
+      status: "Ativo",
       type: "Projeto",
       link: "",
       about: "",
@@ -178,6 +190,7 @@ function Projetos() {
       name: "Fliperama",
       description: "Estrutura de fliperama para jogos do Ramo.",
       team: "Hardware",
+      status: "Ativo",
       type: "Projeto",
       link: "",
       about: "",
@@ -187,6 +200,7 @@ function Projetos() {
       name: "Console Portátil",
       description: "Portabilidade para jogos eletrônicos.",
       team: "Hardware",
+      status: "Finalizado",
       type: "Projeto",
       link: "",
       about: "",
@@ -196,6 +210,7 @@ function Projetos() {
       name: "Torre de Carregador",
       description: "Estrutura com várias tomadas de fácil acesso.",
       team: "Hardware",
+      status: "Finalizado",
       type: "Projeto",
       link: "",
       about: "",
@@ -226,6 +241,7 @@ function Projetos() {
       projeto.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       projeto.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
       projeto.team.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      projeto.status.toLowerCase().includes(searchTerm.toLowerCase()) ||
       projeto.membros.some((membro) =>
         membro.nome.toLowerCase().includes(searchTerm.toLowerCase())
       )
@@ -294,7 +310,7 @@ function Projetos() {
         <div className="Projects">
           {searchResults.map((infos) => (
             <div key={infos.name} onClick={() => setSelectedProject(infos)}>
-              <ProjectCard infos={infos} />
+              <ProjectCard infos={infos} showTeam={!query.get('equipe')} />
             </div>
 
           ))}
@@ -319,6 +335,12 @@ function Projetos() {
 
             <h1 className="modal-title">{selectedProject.name}</h1>
 
+            <p>
+              <strong>Status:</strong>{" "}
+              <span className={`project-status project-status--${selectedProject.status.toLowerCase().replace(/\s+/g, "-")}`}>
+                {selectedProject.status}
+              </span>
+            </p>
             <p><strong>Equipe:</strong> {selectedProject.team}</p>
             <p><strong>Tipo:</strong> {selectedProject.type}</p>
             

@@ -5,6 +5,7 @@ import webicon from "../../assets/web-icon.png"
 import iaicon from "../../assets/ia-icon.png"
 import gamesicon from "../../assets/game-icon.png"
 import hardicon from "../../assets/hard-icon.png"
+import marketingIcon from "../../assets/marketing-icon.svg"
 import { useNavigate } from 'react-router-dom';
 import {ArrowCircleRight, ArrowCircleLeft} from "phosphor-react"
 
@@ -49,6 +50,15 @@ const equipes = [
     cores: { 
       esquerda: 'rgb(226, 226, 13) ',
       direita: '	rgb(226, 226, 13) ',
+    },
+  },
+  {
+    nome: 'Marketing',
+    logo: marketingIcon,
+    descricao: `Equipe responsável por planejar a comunicação do capítulo, divulgar projetos e eventos e fortalecer a presença do Computer Society.`,
+    cores: {
+      esquerda: '#f28c28',
+      direita: '#f28c28',
     },
   },
 ];
