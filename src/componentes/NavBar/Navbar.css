@@ -1,77 +1,9 @@
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #1267a8;
-    padding: 10px 20px;
-    border-bottom: 1px solid #ccc;
-    overflow: hidden;
-  }
-  
-  .logo-container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .logo {
-    height: 8vh;
-    object-fit: contain;
-  }
-
-  .logo-ramo {
-    height: 10vh;
-    margin-bottom: -10px;
-  }
-  
-  @media (max-width: 1024px) {
-    .logo-container {
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .navbar {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .nav-list {
-      gap: 10px;
-    }
-
-    .logo {
-      height: 10vh;
-      width: 40vw;
-      min-width: 200px;
-      object-fit: contain;
-      margin-left: -30px;
-    }
-  
-    .logo-ramo {
-      height: 10vh;
-      width: 50vw;
-      min-width: 450px;
-      margin-bottom: 30px;
-    }
-  }
-  
-  .nav-list {
-    display: flex;
-    gap: 30px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .nav-item {
-    font-weight: bold;
-    font-size: 15px;
-    cursor: pointer;
-    color: #fff;
-    font-family: Verdana;
-    text-decoration: none;
-  }
-
-  .nav-item:hover{
-    text-decoration: underline;
-  }
+.navbar{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px 24px;padding:12px clamp(16px,4vw,40px);background:var(--ink);border-bottom:3px solid var(--orange)}
+.logo-container{display:flex;align-items:center;gap:18px}
+.logo{height:42px;width:auto}
+.logo-ramo{height:40px;width:auto;padding-left:18px;border-left:1px solid rgba(255,255,255,.25)}
+.nav-list{display:flex;gap:4px;list-style:none}
+.nav-item{display:block;padding:8px 16px;border-radius:6px;color:#c9d8e6;font-weight:600;font-size:.92rem;text-decoration:none;transition:background .2s,color .2s}
+.nav-item:hover{background:rgba(255,255,255,.1);color:#fff}
+.nav-item.active{background:var(--orange);color:var(--ink)}
+@media (max-width:700px){.navbar{justify-content:center}.logo{height:34px}.logo-ramo{height:32px;padding-left:12px}}

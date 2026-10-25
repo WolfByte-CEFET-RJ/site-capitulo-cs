@@ -1,0 +1,15 @@
+.carrossel{position:relative;overflow:hidden;border-radius:12px;background:var(--ink)}
+.car-trilho{display:flex;transition:transform .5s ease}
+.car-slide{position:relative;flex:0 0 100%;aspect-ratio:16/9;margin:0}
+.car-slide img{width:100%;height:100%;object-fit:cover}
+.car-slide figcaption{position:absolute;inset:auto 0 0 0;display:flex;flex-direction:column;gap:2px;padding:56px 24px 20px;background:linear-gradient(transparent,rgba(11,31,51,.88));color:#fff;text-align:left}
+.car-slide figcaption strong{font:700 1.15rem var(--display)}
+.car-slide figcaption span{font-size:.85rem;color:#c9d8e6}
+.car-seta{position:absolute;top:50%;transform:translateY(-50%);display:grid;place-items:center;width:42px;height:42px;border-radius:8px;background:rgba(255,255,255,.92);color:var(--ink);transition:background .2s}
+.car-seta:hover{background:var(--orange)}
+.car-seta.esq{left:14px}
+.car-seta.dir{right:14px}
+.car-pontos{position:absolute;top:14px;right:16px;display:flex;gap:6px}
+.car-pontos button{width:12px;height:12px;border-radius:50%;background:rgba(255,255,255,.55)}
+.car-pontos button.on{background:var(--orange)}
+@media (max-width:600px){.car-slide{aspect-ratio:4/3}}

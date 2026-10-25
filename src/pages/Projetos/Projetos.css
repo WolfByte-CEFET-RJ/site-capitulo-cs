@@ -1,189 +1,23 @@
-/* Envolve toda a página para garantir altura mínima da viewport e flexbox para empurrar o footer */
-.main {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-.searchBar {
-  display: flex;
-  align-items: center;
-  background-color: rgb(255, 255, 255);
-  border-radius: 30px;
-  padding: 8px 16px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 500px;
-  margin: 40px auto 20px auto;
-  transition: box-shadow 0.3s ease;
-}
-
-.searchBar:hover {
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-}
-
-.clean-search{
-  background-color: #005DA7;
-  border-radius: 40px;
-  width: 10%;
-}
-
-.clean-search:hover{
-  cursor: pointer;
-  background-color: #888;
-  border-radius: 40px;
-}
-
-.searchBar input {
-  border: none;
-  outline: none;
-  padding: 10px;
-  font-size: 16px;
-  width: 100%;
-  background-color: transparent;
-  margin-left: 10px;
-}
-
-.searchIcon {
-  color: #888;
-}
-
-.align-pro {
-  flex-grow:1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 40px;
-}
-
-.Projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  padding: 4%;
-
-  justify-items: center;
-  align-items: stretch; 
-
-  box-sizing: border-box;
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
-}
-
-@media (max-width: 400px) {
-  .Projects {
-    grid-template-columns: 1fr;
-    padding: 2%;
-    gap: 10px;
-  }
-
-}
-
-.exib{
-  width: 100%;
-  text-align: center;
-}
-
-
-/* Modal overlay */
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-}
-
-.modal-content {
-  position: relative; /* necessário pro ícone absoluto funcionar */
-  background: white;
-  padding: 1.5rem;
-  border-radius: 8px;
-  width: 90%;
-  max-width: 600px;
-  max-height: 80vh;
-  overflow-y: auto;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  text-align: justify;
-}
-
-.modal-title {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-/* Em telas maiores, dá pra melhorar a largura */
-@media (min-width: 768px) {
-  .modal-content {
-    width: 70%;
-  }
-}
-
-@media (min-width: 1024px) {
-  .modal-content {
-    width: 50%;
-  }
-}
-
-.modal-content > p {
-  margin-bottom: 3%;
-}
-
-.membros-container {
-  margin-top: 16px;
-}
-
-.membros-pills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 8px;
-}
-
-.membro-pill {
-  background-color: #005DA7;
-  color: white;
-  padding: 8px 12px;
-  border-radius: 9999px;
-  font-weight: 500;
-  font-size: 0.9rem;
-}
-
-.membro-pill:hover{
-  cursor: pointer;
-}
-
-.align-fechar{
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.close-icon {
-  position: absolute;
-  top: 25px;
-  right: 25px;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  color: #333;
-  z-index: 10;
-  transition: transform 0.2s ease;
-}
-
-.close-icon:hover {
-  transform: scale(1.2);
-  color: #c00;
-}
-
-.top-modal{
-  display: flex;
-  justify-content: space-between;
-}
+.main{display:flex;flex-direction:column;min-height:calc(100vh - 72px)}
+.searchBar{display:flex;align-items:center;gap:8px;width:calc(100% - 32px);max-width:560px;margin:48px auto 12px;padding:6px 6px 6px 16px;background:#fff;border:1.5px solid var(--line);border-radius:10px;transition:border-color .2s}
+.searchBar:focus-within{border-color:var(--blue)}
+.searchBar input{flex:1;min-width:0;padding:10px 4px;border:0;outline:0;background:transparent;font:inherit}
+.searchIcon{flex:none;color:var(--muted)}
+.clean-search{flex:none;display:grid;place-items:center;width:40px;height:40px;border-radius:8px;background:var(--blue);transition:background .2s}
+.clean-search:hover{background:var(--ink)}
+.align-pro{flex:1;display:flex;justify-content:center}
+.Projects{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:20px;width:100%;max-width:1160px;padding:24px 20px 32px;align-items:stretch}
+.Projects>div{display:flex}
+.exib{padding-bottom:28px;text-align:center;color:var(--muted)}
+.exib h3{font:500 .95rem var(--font);letter-spacing:0}
+.modal-overlay{position:fixed;inset:0;z-index:1000;display:flex;align-items:center;justify-content:center;padding:16px;background:rgba(11,31,51,.65)}
+.modal-content{position:relative;width:100%;max-width:640px;max-height:85vh;overflow-y:auto;padding:36px 32px 28px;background:#fff;border-radius:14px;box-shadow:0 30px 70px -20px rgba(0,0,0,.5)}
+.modal-title{margin-bottom:18px;padding-right:36px}
+.modal-content>p{margin-bottom:12px}
+.modal-content a{word-break:break-all}
+.close-icon{position:absolute;top:18px;right:18px;display:grid;place-items:center;width:36px;height:36px;border-radius:8px;background:var(--tint);color:var(--ink);cursor:pointer;transition:background .2s,color .2s}
+.close-icon:hover{background:var(--ink);color:#fff}
+.membros-container{margin-top:18px}
+.membros-pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.membro-pill{padding:6px 12px;border-radius:6px;background:var(--tint);color:var(--blue);font-weight:600;font-size:.85rem;cursor:pointer;transition:background .2s,color .2s}
+.membro-pill:hover{background:var(--blue);color:#fff}
