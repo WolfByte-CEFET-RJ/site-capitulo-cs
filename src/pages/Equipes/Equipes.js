@@ -62,7 +62,7 @@ function Equipe() {
     setIndex((prevIndex) => (prevIndex - 1 + equipes.length) % equipes.length);
   };
 
-  const { nome, logo, descricao, projetos, cores } = equipes[index];
+  const { nome, logo, descricao, cores } = equipes[index];
 
   return (
     <div className='equipe-align'>

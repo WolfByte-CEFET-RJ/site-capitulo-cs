@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { MagnifyingGlass } from 'phosphor-react';
 import ProjectCard from '../../componentes/Cards/CardProject';
 import './Projetos.css';
@@ -11,7 +11,7 @@ import { X, Eraser } from 'phosphor-react';
 
 function Projetos() {
 
-  const [projetos, setProjetos] = useState([
+  const [projetos] = useState([
     {
       name: "Site Do Ramo",
       description: "Site de inscrição e divulgação do Ramo Estudantil IEEE CEFET/RJ.",
@@ -231,12 +231,10 @@ function Projetos() {
     setSearchTerm(event.target.value);
   };
 
-  const useQuery = () => {
-    return new URLSearchParams(useLocation().search);
-  };
-  const query = useQuery();
+  const location = useLocation();
+  const query = new URLSearchParams(location.search);
 
-  const searchProjects = () => {
+  const searchProjects = useCallback(() => {
     const results = projetos.filter((projeto) =>
       projeto.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       projeto.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -247,7 +245,7 @@ function Projetos() {
       )
     );
     setSearchResults(results);
-  };
+  }, [projetos, searchTerm]);
 
   const handleClearSearch = () => {
     setSearchTerm("");
@@ -258,12 +256,12 @@ function Projetos() {
   };  
 
   useEffect(() => {
-    const equipeQuery = query.get('equipe');
+    const equipeQuery = new URLSearchParams(location.search).get('equipe');
     if (equipeQuery) {
       setSearchTerm(equipeQuery);
     }
-    searchProjects()
-  }, [searchTerm]);
+    searchProjects();
+  }, [location.search, searchProjects]);
 
   function copyEmail(membro) {
 
