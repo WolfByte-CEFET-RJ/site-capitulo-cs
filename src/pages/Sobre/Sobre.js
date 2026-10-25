@@ -1,10 +1,12 @@
 import React from "react";
 import './Sobre.css';
 import { BookOpen, Handshake, Crown, Brain, Heart, UsersFour, Target, Eye, ComputerTower, Browsers, Envelope, Gear } from 'phosphor-react';
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Footer from "../../componentes/Footer/Footer.js"
+import Carrossel from "../../componentes/Carrossel/Carrossel.js";
+import { fotos } from "../../data/galeria.js";
 
 function Sobre() {
 
@@ -43,14 +45,14 @@ function Sobre() {
       
       <div className="about">
         <h1>Computer Society no CEFET/RJ</h1>
-        <h2>Capítulo IEEE fortalecendo a inovação tecnológica do Rio de Janeiro</h2>
+        <h2>Conhecido como WolfByte, somos um capítulo IEEE que promove a inovação tecnológica do Rio de Janeiro</h2>
 
         <div className="logos">
           <img
             title="CEFET/RJ"
             className="logo-cefet"
             src="/LogoCEFET.png"
-            alt="LOGO"
+            alt="CEFET/RJ"
             onClick={() => window.open("https://www.cefet-rj.br/", "_blank")}
             style={{ cursor: 'pointer' }}
           />
@@ -58,7 +60,7 @@ function Sobre() {
             title="Computer Society Chapter"
             className="logo-cs"
             src="/LogoAbaCS.png"
-            alt="LOGO"
+            alt="IEEE Computer Society"
             onClick={() => window.open("https://www.computer.org/", "_blank")}
             style={{ cursor: 'pointer' }}
           />
@@ -66,7 +68,7 @@ function Sobre() {
             title="WolfByte"
             className="logo-byte"
             src="/IconeByte.png"
-            alt="LOGO"
+            alt="WolfByte"
             onClick={() => {}}
             style={{ cursor: 'default' }}
           />
@@ -74,7 +76,7 @@ function Sobre() {
             title="Ramo Estudantil IEEE CEFET/RJ"
             className="logoramo"
             src="/IconeRamo.png"
-            alt="LOGO"
+            alt="Ramo Estudantil IEEE CEFET/RJ"
             onClick={() => window.open("https://www.ramoieeecefetrj.com.br", "_blank")}
             style={{ cursor: 'pointer' }}
           />
@@ -82,18 +84,26 @@ function Sobre() {
 
 
         <div className="actions">
-          <button onClick={()=>{navigate("/equipes")}}><Gear size={24} style={{marginBottom: -5}} /> Nossas Atividades</button>
-          <button onClick={scrollToContato}><Envelope size={24} style={{marginBottom: -5}}/> Fale Conosco</button>
+          <button className="btn" onClick={()=>{navigate("/equipes")}}><Gear size={24} /> Nossas Atividades</button>
+          <button className="btn ghost" onClick={scrollToContato}><Envelope size={24}/> Fale Conosco</button>
         </div>
       </div>
       
+      <section className="home-galeria">
+        <div className="home-galeria-topo">
+          <h2>Nossos eventos</h2>
+          <Link to="/galeria">Ver galeria completa</Link>
+        </div>
+        <Carrossel fotos={fotos.slice(0, 8)} />
+      </section>
+
       <div className="info">
         <h1>Computer Society + CEFET/RJ</h1>
         <p className="text">
           O <span className="destaque">Capítulo IEEE Computer Society (CS)</span> do CEFET/RJ é uma <span className="destaque">iniciativa acadêmica e estudantil</span> que integra alunos apaixonados por tecnologia,computação e inovação, oferecendo um espaço dinâmico para o desenvolvimento técnico e pessoal. Vinculado ao <span className="destaque">Instituto de Engenheiros Eletricistas e Eletrônicos (IEEE)</span>, o maior instituto profissional do mundo dedicado ao avanço da tecnologia, o capítulo atua como uma ponte entre o meio acadêmico e o mercado, promovendo atividades práticas, eventos e projetos colaborativos.
         </p>
 
-        <img className="logo2" src="/11.png" alt="LOGO" />
+        <img className="logo2" src="/11.png" alt="IEEE Computer Society - Capítulo CEFET/RJ" />
 
         <p className="text">
           Fundado por estudantes do <span className="destaque">Centro Federal de Educação Tecnológica Celso Suckow da Fonseca (CEFET/RJ)</span>, o CS Chapter tem como missão fomentar o interesse e o aprofundamento em áreas como ciência da computação, engenharia de software, inteligência artificial, segurança da informação, computação em nuvem, entre outras. Através de workshops, hackathons, seminários, grupos de estudo e projetos técnicos, o capítulo oferece aos seus membros <span className="destaque">oportunidades de aprendizado além da sala de aula</span>.
@@ -179,7 +189,7 @@ function Sobre() {
       <form 
         action="https://formsubmit.co/sbc-cefetrj-cs@ieee.org" 
         method="POST"
-        class="form-container"
+        className="form-container"
         onSubmit={()=>{toast.info("Cheque sem endereço de email! Vamos te responder por lá.")}}
       >
         <input 
@@ -187,25 +197,24 @@ function Sobre() {
           name="name" 
           placeholder="Seu nome" 
           required
-          class="input-field"
+          className="input-field"
         />
         <input 
           type="email" 
           name="email" 
           placeholder="Seu email" 
           required
-          class="input-field"
+          className="input-field"
         />
         <textarea 
           name="message" 
           placeholder="Escreva sua mensagem..." 
           required
-          class="textarea-field"
+          className="textarea-field"
         ></textarea>
         <button 
           type="submit"
-          class="submit-button"
-          style={{width: "100%"}}
+          className="submit-button"
         >
           Enviar
         </button>

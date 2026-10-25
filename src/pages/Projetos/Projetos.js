@@ -329,7 +329,7 @@ function Projetos() {
                 <a href={selectedProject.link} target="_blank" rel="noopener noreferrer">
                   {selectedProject.link}
                 </a>) 
-              : <p style={{ color: "gray", fontSize: 12 }}>Nenhum link informado.</p>
+              : <span style={{ color: "gray", fontSize: 12 }}>Nenhum link informado.</span>
               }
 
             </p>
@@ -341,7 +341,7 @@ function Projetos() {
               {selectedProject.about ? (
                 <>{selectedProject.about}</>
               ) : (
-                <p style={{ color: "gray", fontSize: 12 }}>Sem mais informações sobre o projeto.</p>
+                <span style={{ color: "gray", fontSize: 12 }}>Sem mais informações sobre o projeto.</span>
               )}
             </p>
 

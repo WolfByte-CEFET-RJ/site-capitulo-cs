@@ -1,72 +1,15 @@
-.grid2{
-    background-color: white;       /* Cor de fundo dos campos (opcional) */
-  border: 2px solid #ccc;         /* Borda dos campos (opcional) */
-  border-radius: 10px;            /* Arredonda as bordas dos campos */
-  
-  justify-content: center;       /* Centraliza horizontalmente o conteúdo (opcional) */
-  align-items: center;           /* Centraliza verticalmente o conteúdo (opcional) */
-  font-size: 30px; 
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; 
-  text-align: center;
-  cursor: pointer;
-  height: fit-content;
-   
-}
-.grid2:hover {
-    transform: scale(1.05); /* Expande o card em 5% no hover */
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra suave no hover */
-    background-color: #006ff6;
-    color: white;
-  }
-
-
-
-.Descript{ 
-  text-align: center;
-  margin-top: 5%;
-}
-
-.projectCard button{
-    margin-bottom: 5%;
-}
-
-.projectCard {
-  border: 1px solid black;
-  border-radius: 40px;
-  cursor: pointer;
-
-  width: 100%;
-  max-width: 450px;
-  min-height: 300px;
-  height: auto;
-  
-  margin-bottom: 20px;
-
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: #ffffff;
-
-  padding: 5%;
-  padding-top: 15%;
-  padding-bottom: 15%;
-  box-sizing: border-box;
-
-  text-align: center;
-  overflow: hidden;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; 
-}
-
-  .projectCard:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  }
-
-  @media (max-width: 400px) {
-    .projectCard {
-      padding: 10% 5%;
-    }
-  }
-  
+.projectCard{--c:var(--blue);display:flex;flex-direction:column;gap:12px;width:100%;padding:24px 22px 22px;background:#fff;border:1px solid var(--line);border-left:5px solid var(--c);border-radius:10px;cursor:pointer;text-align:left;transition:transform .2s,box-shadow .2s}
+.projectCard:hover{transform:translateY(-4px);box-shadow:0 14px 26px -16px rgba(11,31,51,.45)}
+.projectCard[data-team="Web/App"]{--c:var(--web)}
+.projectCard[data-team="IA/BOT"]{--c:var(--ia)}
+.projectCard[data-team="Games"]{--c:var(--games)}
+.projectCard[data-team="Hardware"]{--c:var(--hard)}
+.projectCard[data-team="Marketing"]{--c:var(--mkt)}
+.projectCard[data-team="Hardware"] .tag.team{color:var(--ink)}
+.projectCard h1{font-size:1.3rem}
+.pc-tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{padding:2px 9px;border-radius:4px;background:var(--tint);color:var(--ink);font-size:.78rem;font-weight:600}
+.tag.team{background:var(--c);color:#fff}
+.Descript{flex:1;color:var(--muted);font-size:.95rem}
+.pc-more{color:var(--blue);font-weight:600;font-size:.9rem}
+.grid2{padding:16px;background:#fff;border:1px solid var(--line);border-radius:10px;text-align:center}

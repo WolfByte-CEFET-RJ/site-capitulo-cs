@@ -1,36 +1,38 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./Navbar.css";
 
-function Navbar() {
-  const location = useLocation();
-  const nomeDaRota = location.pathname;
+const links = [
+  { to: "/", label: "Tela Inicial", end: true },
+  { to: "/equipes", label: "Equipes" },
+  { to: "/projetos/filtro", label: "Projetos" },
+  { to: "/galeria", label: "Galeria" },
+];
 
+function Navbar() {
   return (
     <nav className="navbar">
       <div className="logo-container">
         <Link to="/">
-          <img src="/Logo.png" alt="Logo" className="logo" /> 
+          <img src="/Logo.png" alt="IEEE Computer Society" className="logo" />
         </Link>
-        <Link to="https://www.ramoieeecefetrj.com.br">
-          <img src="/LogoRamo.png" alt="Logo - Ramo Estudantil - CEFET/RJ" className="logo-ramo"/>
-        </Link>
+        <a href="https://www.ramoieeecefetrj.com.br" target="_blank" rel="noopener noreferrer">
+          <img src="/LogoRamo.png" alt="Ramo Estudantil IEEE - CEFET/RJ" className="logo-ramo" />
+        </a>
       </div>
-      
+
       <ul className="nav-list">
-        {nomeDaRota === "/" ? (<></>) : 
-        (<><li>
-          <Link className="nav-item" to="/">Tela Inicial</Link>
-        </li></>)}
-        {nomeDaRota === "/equipes" ? (<></>) : 
-        (<><li>
-          <Link className="nav-item" to="/equipes">Equipes</Link>
-        </li></>)}
-        {nomeDaRota === "/projetos/filtro" ? (<></>) : 
-        (<><li>
-          <Link className="nav-item" to="/projetos/filtro?">Projetos</Link>
-          </li></>)}
-        
+        {links.map(({ to, label, end }) => (
+          <li key={to}>
+            <NavLink
+              to={to}
+              end={end}
+              className={({ isActive }) => "nav-item" + (isActive ? " active" : "")}
+            >
+              {label}
+            </NavLink>
+          </li>
+        ))}
       </ul>
     </nav>
   );
