@@ -1,6 +1,6 @@
 import React from "react";
 import './Sobre.css';
-import { BookOpen, Handshake, Crown, Brain, Heart, UsersFour, Target, Eye, ComputerTower, Browsers, Envelope, Gear } from 'phosphor-react';
+import { BookOpen, Handshake, Crown, Brain, Heart, UsersFour, Target, Eye, Envelope, Gear } from 'phosphor-react';
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
